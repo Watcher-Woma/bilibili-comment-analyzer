@@ -68,7 +68,7 @@ def save_to_csv(
     if create_new_file:
         # 创建新文件或覆盖现有文件
         try:
-            with open(csv_path, "w", newline="", encoding="utf-8") as file:
+            with open(csv_path, "w", newline="", encoding="utf-8-sig") as file:
                 writer = csv.writer(file)
 
                 # 写入表头
@@ -123,7 +123,7 @@ def save_to_csv(
     else:
         # 追加到现有文件
         try:
-            with open(csv_path, "a", newline="", encoding="utf-8") as file:
+            with open(csv_path, "a", newline="", encoding="utf-8-sig") as file:
                 writer = csv.writer(file)
 
                 valid_comments = 0
